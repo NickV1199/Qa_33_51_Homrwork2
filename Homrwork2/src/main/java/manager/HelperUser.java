@@ -31,9 +31,14 @@ public class HelperUser extends HelperBase {
 //        String text = element.getText();
 //        return text;
 //        pause(2000);
-        return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
+        return wd.findElement(By.cssSelector(".dialog-container>h1")).getText();
 
     }
+
+    public String getMessage2(){
+        return wd.findElement(By.cssSelector(".input-container")).getText();
+    }
+
 
     public void acceptLogin() {
         click(By.xpath("//button[normalize-space()='Ok']"));

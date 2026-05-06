@@ -27,27 +27,72 @@ public class LoginTest extends TestBase {
 
         //Assert --> if element with text "Logged in success" is present
 
-        Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
+        Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in");
 
         //app.getHelperUser().acceptLogin();
 
-
     }
-
 
     @Test
-    public void loginSuccessModel() {
+    public void loginWrongEmail() {
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("bobthebobert@gmail.com", "Bobert123!");
-        app.getHelperUser().submitLogin();
+        app.getHelperUser().fillLoginRegistrationForm("bobthebobertgmail.com", "Bobert123!");
+//        app.getHelperUser().submitLogin();
 
+        //Assert --> if element with text "Logged in success" is present
 
-        Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
+        Assert.assertEquals(app.getHelperUser().getMessage2(), "Email *\n" +
+                "It'snot look like email");
 
         //app.getHelperUser().acceptLogin();
 
 
     }
+
+    @Test
+    public void loginWrongPassword() {
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("bobthebobert@gmail.com", "Bobert123");
+        app.getHelperUser().submitLogin();
+
+        //Assert --> if element with text "Logged in success" is present
+
+        Assert.assertEquals(app.getHelperUser().getMessage(), "Login failed");
+
+        //app.getHelperUser().acceptLogin();
+
+
+    }
+
+    @Test
+    public void loginUregisteredUser() {
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("robbertthebobert@gmail.com", "Bobert1231!");
+        app.getHelperUser().submitLogin();
+
+        //Assert --> if element with text "Logged in success" is present
+
+        Assert.assertEquals(app.getHelperUser().getMessage(), "Login failed");
+
+        //app.getHelperUser().acceptLogin();
+
+
+    }
+
+
+//    @Test
+//    public void loginSuccessModel() {
+//        app.getHelperUser().openLoginRegistrationForm();
+//        app.getHelperUser().fillLoginRegistrationForm("bobthebobert@gmail.com", "Bobert123!");
+//        app.getHelperUser().submitLogin();
+//
+//
+//        Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
+//
+//        //app.getHelperUser().acceptLogin();
+//
+//
+//    }
 
     @AfterMethod
     public void postCondition(){
