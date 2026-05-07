@@ -3,6 +3,9 @@ package models;
 public class User {
     private String email;
     private String password;
+    private String name;
+    private String lastName;
+
 
 
     public User setEmail(String email) {
@@ -16,6 +19,17 @@ public class User {
         return this;
     }
 
+
+    public User setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public User setLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -24,6 +38,13 @@ public class User {
         return password;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
 
     @Override
     public String toString() {

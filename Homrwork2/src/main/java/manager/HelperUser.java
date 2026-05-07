@@ -1,6 +1,8 @@
 package manager;
 
+import models.User;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -10,38 +12,32 @@ public class HelperUser extends HelperBase {
         super(wd);
     }
 
-    public void openLoginRegistrationForm() {
-        click(By.cssSelector("a[ng-reflect-router-link='login']"));
+    public void openLoginForm() {
+        click(By.xpath("//a[text()=' Log in ']"));
     }
 
-
-    public void fillLoginRegistrationForm(String email, String password) {
-        type(By.xpath("//input[@id='email']"), email);
-
-        type(By.xpath("//input[@id='password']"), password);
+    public void fillLoginForm(String email, String password) {
+        type(By.id("email"), email);
+        type(By.id("password"), password);
     }
 
-    public void submitLogin() {
-        click(By.xpath("//button[contains(text(),'Y’alla!')]"));
+    public void submit() {
+        click(By.xpath("//button[@type='submit']"));
     }
-
 
     public String getMessage() {
 //        WebElement element = wd.findElement(By.cssSelector(".dialog-container>h2"));
 //        String text = element.getText();
 //        return text;
-//        pause(2000);
-        return wd.findElement(By.cssSelector(".dialog-container>h1")).getText();
+        // pause(2000);
+        return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
 
     }
 
-    public String getMessage2(){
-        return wd.findElement(By.cssSelector(".input-container")).getText();
-    }
-
-
-    public void acceptLogin() {
-        click(By.xpath("//button[normalize-space()='Ok']"));
+    public void clickOkButton() {
+        if (isElementPresent(By.xpath("//button[text()='Ok']"))) {
+            click(By.xpath("//button[text()='Ok']"));
+        }
     }
 
     public boolean isLogged() {
@@ -50,5 +46,35 @@ public class HelperUser extends HelperBase {
 
     public void logout() {
         click(By.xpath("//*[text()=' Logout ']"));
+    }
+
+
+    public boolean isYallaButtonNotActive() {
+        boolean res = isElementPresent(By.cssSelector("button[disabled]"));
+        //var2
+        WebElement element = wd.findElement(By.cssSelector("button[type = 'submit']"));
+        boolean result = element.isEnabled();
+
+        return res && !result;
+    }
+
+
+    //***************************REGISTRATION***********************************
+
+
+    public void openRegistrationForm() {
+        click(By.xpath("//a[text()=' Sign up ']"));
+    }
+
+    public void fillRegistrationForm(User user) {
+        type(By.id("name"), user.getName());
+        type(By.id("lastName"), user.getLastName());
+        type(By.id("email"), user.getEmail());
+        type(By.id("password"), user.getPassword());
+    }
+
+    public void checkPolicy(){
+        JavascriptExecutor js = (JavascriptExecutor) wd;
+        js.executeScript("document.querySelector('#terms-of-use').click()");
     }
 }

@@ -7,96 +7,63 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends TestBase {
 
-//    @Test
-//    public void test() {
-//
-//    }
-
     @BeforeMethod
-    public void preCondition() {
-        if (app.getHelperUser().isLogged()) {
+    public void preCondition(){
+        if(app.getHelperUser().isLogged()){
             app.getHelperUser().logout();
         }
     }
 
     @Test
-    public void loginSuccess() {
-        app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("bobthebobert@gmail.com", "Bobert123!");
-        app.getHelperUser().submitLogin();
-
-        //Assert --> if element with text "Logged in success" is present
-
-        Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in");
-
-        //app.getHelperUser().acceptLogin();
-
+    public void loginSuccess(){
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("bobthebobert@gmail.com","Bobert123!");
+        app.getHelperUser().submit();
+        //Assert--> if element with text "Logged in success" is present
+        Assert.assertEquals(app.getHelperUser().getMessage(),"Logged in success");
+        //app.getHelperUser().clickOkButton();
     }
-
-    @Test
-    public void loginWrongEmail() {
-        app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("bobthebobertgmail.com", "Bobert123!");
-//        app.getHelperUser().submitLogin();
-
-        //Assert --> if element with text "Logged in success" is present
-
-        Assert.assertEquals(app.getHelperUser().getMessage2(), "Email *\n" +
-                "It'snot look like email");
-
-        //app.getHelperUser().acceptLogin();
-
-
-    }
-
-    @Test
-    public void loginWrongPassword() {
-        app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("bobthebobert@gmail.com", "Bobert123");
-        app.getHelperUser().submitLogin();
-
-        //Assert --> if element with text "Logged in success" is present
-
-        Assert.assertEquals(app.getHelperUser().getMessage(), "Login failed");
-
-        //app.getHelperUser().acceptLogin();
-
-
-    }
-
-    @Test
-    public void loginUregisteredUser() {
-        app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("robbertthebobert@gmail.com", "Bobert1231!");
-        app.getHelperUser().submitLogin();
-
-        //Assert --> if element with text "Logged in success" is present
-
-        Assert.assertEquals(app.getHelperUser().getMessage(), "Login failed");
-
-        //app.getHelperUser().acceptLogin();
-
-
-    }
-
 
 //    @Test
-//    public void loginSuccessModel() {
-//        app.getHelperUser().openLoginRegistrationForm();
-//        app.getHelperUser().fillLoginRegistrationForm("bobthebobert@gmail.com", "Bobert123!");
+//    public void loginSuccessModel(){
+//        app.getHelperUser().openLoginForm();
+//        app.getHelperUser().fillLoginForm("margo@gmail.com","Mmar123456$");
 //        app.getHelperUser().submitLogin();
-//
-//
-//        Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
-//
-//        //app.getHelperUser().acceptLogin();
-//
-//
+//        //Assert--> if element with text "Logged in success" is present
+//        Assert.assertEquals(app.getHelperUser().getMessage(),"Logged in success");
+//       // app.getHelperUser().clickOkButton();
 //    }
+
+    @Test
+    public void loginWrongEmail(){
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("bobthebobertgmail.com","Bobert123!");
+        app.getHelperUser().submit();
+        Assert.assertEquals(app.getHelperUser().getErrorText(),"It'snot look like email");
+        Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+    }
+
+    @Test
+    public void loginWrongPassword(){
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("bobthebobert@gmail.com","Bobert123");
+        app.getHelperUser().submit();
+        Assert.assertEquals(app.getHelperUser().getMessage(),"\"Login or Password incorrect\"");
+    }
+
+    @Test
+    public void loginUnregisteredUser(){
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("luna@gmail.com","Luck123456$");
+        app.getHelperUser().submit();
+        Assert.assertEquals(app.getHelperUser().getMessage(),"\"Login or Password incorrect\"");
+    }
+
+
 
     @AfterMethod
     public void postCondition(){
-        app.getHelperUser().acceptLogin();
+        app.getHelperUser().clickOkButton();
     }
 
 }
