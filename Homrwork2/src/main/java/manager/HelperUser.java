@@ -29,7 +29,7 @@ public class HelperUser extends HelperBase {
 //        WebElement element = wd.findElement(By.cssSelector(".dialog-container>h2"));
 //        String text = element.getText();
 //        return text;
-        // pause(2000);
+        pause(2000);
         return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
 
     }
@@ -73,21 +73,23 @@ public class HelperUser extends HelperBase {
         type(By.id("password"), user.getPassword());
     }
 
-    public void checkPolicy(){
+    public void checkPolicy() {
         JavascriptExecutor js = (JavascriptExecutor) wd;
         js.executeScript("document.querySelector('#terms-of-use').click()");
     }
 
-    public void checkPolicyXY(){
-        WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']"));
-        Rectangle rectangle = label.getRect();
-        int w = rectangle.getWidth();
+    public void checkPolicyXY() {
+        if (!wd.findElement(By.id("terms-of-use")).isSelected()) {
+            WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']"));
+            Rectangle rectangle = label.getRect();
+            int w = rectangle.getWidth();
 
-        int xOffset = -w/2;
+            int xOffset = -w / 2;
 
-        Actions actions = new Actions(wd);
+            Actions actions = new Actions(wd);
 
-        actions.moveToElement(label, xOffset, 0).click().release().perform();
+            actions.moveToElement(label, xOffset, 0).click().release().perform();
+        }
     }
 
 }

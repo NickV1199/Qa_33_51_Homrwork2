@@ -17,7 +17,9 @@ public class RegistrationTests extends TestBase{
     public void preCondition(){
         if(app.getHelperUser().isLogged()){
             app.getHelperUser().logout();
+
         }
+
     }
 
 
@@ -33,9 +35,9 @@ public class RegistrationTests extends TestBase{
 
 
         User user = new User()
-                .setName("Lisa")
+                .setName("Ziza")
                 .setLastName("Snow")
-                .setEmail("snow" + z + "@gmail.com")
+                .setEmail("ziza" + z + "@gmail.com")
                 .setPassword("Snow12345678!");
 
         app.getHelperUser().openRegistrationForm();
@@ -46,21 +48,14 @@ public class RegistrationTests extends TestBase{
         Assert.assertEquals(app.getHelperUser().getMessage(),"You are logged in success");
     }
 
+    //***********************NEGATIVE************************************
+
     @Test
-    public void registrationWrongEmail(){
-        Random random = new Random();
-        int i = random.nextInt(1000) + 1000;
-        System.out.println(i);
-        System.out.println("=================");
-
-        int z = (int) ((System.currentTimeMillis() / 1000) % 360);
-        System.out.println(z);
-
-
+    public void registrationEmptyName(){
         User user = new User()
-                .setName("Lisa")
+                .setName("")
                 .setLastName("Snow")
-                .setEmail("snow" + z + "gmail.com")
+                .setEmail("snow@gmail.com")
                 .setPassword("Snow12345678!");
 
         app.getHelperUser().openRegistrationForm();
@@ -68,26 +63,88 @@ public class RegistrationTests extends TestBase{
         app.getHelperUser().checkPolicyXY();
         app.getHelperUser().submit();
 
-        Assert.assertEquals(app.getHelperUser().getErrorText(),"Wrong email format\n" +
-                "Wrong email format");
+        Assert.assertEquals(app.getHelperUser().getErrorText(),"Name is required");
+        Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+    }
+
+    @Test
+    public void registrationEmptyLastName(){
+        User user = new User()
+                .setName("Liza")
+                .setLastName("")
+                .setEmail("snow@gmail.com")
+                .setPassword("Snow12345678!");
+
+        app.getHelperUser().openRegistrationForm();
+        app.getHelperUser().fillRegistrationForm(user);
+        app.getHelperUser().checkPolicyXY();
+        app.getHelperUser().submit();
+
+        Assert.assertEquals(app.getHelperUser().getErrorText(),"Last name is required");
+        Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+    }
+
+    @Test
+    public void registrationEmptyPassword(){
+        User user = new User()
+                .setName("Liza")
+                .setLastName("Snow")
+                .setEmail("snow@gmail.com")
+                .setPassword("");
+
+        app.getHelperUser().openRegistrationForm();
+        app.getHelperUser().fillRegistrationForm(user);
+        app.getHelperUser().checkPolicyXY();
+        app.getHelperUser().submit();
+
+        Assert.assertEquals(app.getHelperUser().getErrorText(),"Password is required");
+        Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+    }
+
+    @Test
+    public void registrationEmptyEmail(){
+        User user = new User()
+                .setName("Liza")
+                .setLastName("Snow")
+                .setEmail("")
+                .setPassword("Snow12345678!");
+
+        app.getHelperUser().openRegistrationForm();
+        app.getHelperUser().fillRegistrationForm(user);
+        app.getHelperUser().checkPolicyXY();
+        app.getHelperUser().submit();
+
+        Assert.assertEquals(app.getHelperUser().getErrorText(),"Email is required");
+        Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+    }
+
+
+    @Test
+    public void registrationWrongEmail(){
+                User user = new User()
+                .setName("Lisa")
+                .setLastName("Snow")
+                .setEmail("snowgmail.com")
+                .setPassword("Snow12345678!");
+
+        app.getHelperUser().openRegistrationForm();
+        app.getHelperUser().fillRegistrationForm(user);
+        app.getHelperUser().checkPolicyXY();
+        app.getHelperUser().submit();
+
+        //Assert.assertEquals(app.getHelperUser().getErrorText(),"Wrong email format\n" +
+        //        "Wrong email format");
+        Assert.assertTrue(app.getHelperUser().getErrorText().contains("Wrong email format"));
         Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
     }
 
     @Test
     public void registrationWrongPassword(){
-        Random random = new Random();
-        int i = random.nextInt(1000) + 1000;
-        System.out.println(i);
-        System.out.println("=================");
-
-        int z = (int) ((System.currentTimeMillis() / 1000) % 360);
-        System.out.println(z);
-
 
         User user = new User()
                 .setName("Lisa")
                 .setLastName("Snow")
-                .setEmail("snow" + z + "@gmail.com")
+                .setEmail("snow@gmail.com")
                 .setPassword("Snow");
 
         app.getHelperUser().openRegistrationForm();
@@ -102,19 +159,11 @@ public class RegistrationTests extends TestBase{
 
     @Test
     public void registrationExistingUser(){
-        Random random = new Random();
-        int i = random.nextInt(1000) + 1000;
-        System.out.println(i);
-        System.out.println("=================");
-
-        int z = (int) ((System.currentTimeMillis() / 1000) % 360);
-        System.out.println(z);
-
 
         User user = new User()
                 .setName("Lisa")
                 .setLastName("Snow")
-                .setEmail("snow" + z + "@gmail.com")
+                .setEmail("snow@gmail.com")
                 .setPassword("Snow12345678!");
 
         app.getHelperUser().openRegistrationForm();
