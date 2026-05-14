@@ -1,11 +1,24 @@
 package tests;
 
 import models.Car;
+import models.User;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.Random;
 
 public class AddNewCarTests extends TestBase {
+
+
+    @BeforeClass
+    public void preCondition(){
+        if(!app.getHelperUser().isLogged()){
+            app.getHelperUser().login(new User().setEmail("bobthebobert@gmail.com").setPassword("Bobert123!"));
+        }
+    }
+
+
 
     @Test
     public void addNewCarSuccess(){
@@ -25,6 +38,7 @@ public class AddNewCarTests extends TestBase {
 
         app.getHelperCar().openCarForm();
         app.getHelperCar().fillCarForm(car);
+        //app.getHelperCar().attachPhoto("ссылка на папку");
         app.getHelperCar().submitCarForm();
 
 
