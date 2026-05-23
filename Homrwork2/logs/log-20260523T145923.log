@@ -1,0 +1,6 @@
+14:59:29.138 [Test worker] INFO  manager.ApplicationManager -- All tests runs in Chrome Browser
+14:59:30.400 [Test worker] INFO  manager.ApplicationManager -- The link --->https://ilcarro.web.app/search
+14:59:30.432 [Test worker] INFO  tests.TestBase -- Name of method(test) -->loginSuccess
+14:59:31.446 [Test worker] INFO  tests.TestBase -- Start test with name 'loginSuccess'
+14:59:31.446 [Test worker] INFO  tests.TestBase -- Test data --->  email: 'bobthebobert@gmail.com' & password: 'Bobert123!'
+14:59:33.980 [Test worker] INFO  tests.TestBase -- Assert check is element message 'Logged in success' is displayed
