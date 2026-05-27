@@ -1,11 +1,11 @@
 package manager;
 
+import com.google.common.io.Files;
 import net.bytebuddy.implementation.bytecode.Throw;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.security.Key;
 import java.util.List;
 
@@ -66,5 +66,17 @@ public class HelperBase {
     public String getErrorText() {
         return wd.findElement(By.cssSelector("div.error")).getText();
     }
+
+    public void getScreen(String link) {
+        TakesScreenshot takesScreenshot = (TakesScreenshot) wd;
+        File tmp = takesScreenshot.getScreenshotAs(OutputType.FILE);
+        try {
+            Files.copy(tmp, new File(link));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
 
 }
