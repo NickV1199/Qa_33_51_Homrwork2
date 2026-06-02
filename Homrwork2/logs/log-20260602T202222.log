@@ -1,0 +1,192 @@
+20:22:24.904 [Test worker] INFO  manager.ApplicationManager -- All tests runs in Chrome Browser
+20:22:25.323 [Test worker] INFO  manager.ListenerWD -- Navigato to-->https://ilcarro.web.app/search
+20:22:26.623 [Test worker] INFO  manager.ApplicationManager -- The link --->https://ilcarro.web.app/search
+20:22:27.683 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.xpath: //a[text()=' Log in ']
+20:22:27.715 [Test worker] INFO  manager.ListenerWD -- After find element-->By.xpath: //a[text()=' Log in ']
+20:22:27.715 [Test worker] INFO  manager.ListenerWD -- Location of element-->a
+20:22:27.731 [Test worker] INFO  manager.ListenerWD -- Before click element -->atext-->Log in
+20:22:27.811 [Test worker] INFO  manager.ListenerWD -- After click element -->atext-->Log in
+20:22:27.811 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: email
+20:22:27.835 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: email
+20:22:27.841 [Test worker] INFO  manager.ListenerWD -- Location of element-->input
+20:22:27.841 [Test worker] INFO  manager.ListenerWD -- Before click element -->inputtext-->
+20:22:27.914 [Test worker] INFO  manager.ListenerWD -- After click element -->inputtext-->
+20:22:27.945 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:27.950 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:27.995 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:28.000 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:28.024 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:28.041 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:28.077 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:28.077 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:28.133 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: password
+20:22:28.157 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: password
+20:22:28.169 [Test worker] INFO  manager.ListenerWD -- Location of element-->input
+20:22:28.177 [Test worker] INFO  manager.ListenerWD -- Before click element -->inputtext-->
+20:22:28.251 [Test worker] INFO  manager.ListenerWD -- After click element -->inputtext-->
+20:22:28.282 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:28.287 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:28.314 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:28.319 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:28.346 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:28.351 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:28.377 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:28.377 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:28.406 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.xpath: //button[@type='submit']
+20:22:28.424 [Test worker] INFO  manager.ListenerWD -- After find element-->By.xpath: //button[@type='submit']
+20:22:28.424 [Test worker] INFO  manager.ListenerWD -- Location of element-->button
+20:22:28.441 [Test worker] INFO  manager.ListenerWD -- Before click element -->buttontext-->Y’alla!
+20:22:28.490 [Test worker] INFO  manager.ListenerWD -- After click element -->buttontext-->Y’alla!
+20:22:29.522 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.xpath: //button[text()='Ok']
+20:22:29.544 [Test worker] INFO  manager.ListenerWD -- After find element-->By.xpath: //button[text()='Ok']
+20:22:29.546 [Test worker] INFO  manager.ListenerWD -- Location of element-->button
+20:22:29.559 [Test worker] INFO  manager.ListenerWD -- Before click element -->buttontext-->Ok
+20:22:29.608 [Test worker] INFO  manager.ListenerWD -- After click element -->buttontext-->Ok
+20:22:29.608 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.xpath: //button[@type='submit']
+20:22:29.624 [Test worker] INFO  manager.ListenerWD -- After find element-->By.xpath: //button[@type='submit']
+20:22:29.624 [Test worker] INFO  manager.ListenerWD -- Location of element-->button
+20:22:29.641 [Test worker] INFO  manager.ListenerWD -- Before click element -->buttontext-->Y’alla!
+20:22:29.689 [Test worker] INFO  manager.ListenerWD -- After click element -->buttontext-->Y’alla!
+20:22:29.689 [Test worker] INFO  tests.TestBase -- Before method finished logout
+20:22:29.702 [Test worker] INFO  tests.TestBase -- Name of method(test) -->addNewCarSuccess
+20:22:29.704 [Test worker] INFO  tests.TestBase -- Start test with name 'addNewCarSuccess'
+20:22:29.704 [Test worker] INFO  tests.TestBase -- Test login data --->  email: 'bobthebobert@gmail.com' & password: 'Bobert123!'
+20:22:29.704 [Test worker] INFO  tests.TestBase -- Test car data --->  location: 'Tel Aviv, Israel', manufacture: 'Opel', model: 'Astra', year: '2025', fuel: 'Petrol', seats: '4', carClass: 'C', carRegNumber: '678-900-1457', price: '50', about: 'Nice car'
+20:22:29.707 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.xpath: //a[text()=' Let the car work ']
+20:22:29.724 [Test worker] INFO  manager.ListenerWD -- After find element-->By.xpath: //a[text()=' Let the car work ']
+20:22:29.724 [Test worker] INFO  manager.ListenerWD -- Location of element-->a
+20:22:29.740 [Test worker] INFO  manager.ListenerWD -- Before click element -->atext-->Let the car work
+20:22:29.817 [Test worker] INFO  manager.ListenerWD -- After click element -->atext-->Let the car work
+20:22:29.817 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: pickUpPlace
+20:22:29.827 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: pickUpPlace
+20:22:29.842 [Test worker] INFO  manager.ListenerWD -- Location of element-->input
+20:22:29.854 [Test worker] INFO  manager.ListenerWD -- Before click element -->inputtext-->
+20:22:29.907 [Test worker] INFO  manager.ListenerWD -- After click element -->inputtext-->
+20:22:29.934 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:29.937 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:29.962 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:29.967 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:29.992 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:29.997 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:30.023 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:30.025 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:30.064 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.xpath: //*[text()='OK']
+20:22:30.707 [Test worker] INFO  manager.ListenerWD -- After find element-->By.xpath: //*[text()='OK']
+20:22:30.707 [Test worker] INFO  manager.ListenerWD -- Location of element-->button
+20:22:30.723 [Test worker] INFO  manager.ListenerWD -- Before click element -->buttontext-->OK
+20:22:30.790 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: make
+20:22:30.811 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: make
+20:22:30.817 [Test worker] INFO  manager.ListenerWD -- Location of element-->input
+20:22:30.824 [Test worker] INFO  manager.ListenerWD -- Before click element -->inputtext-->
+20:22:30.875 [Test worker] INFO  manager.ListenerWD -- After click element -->inputtext-->
+20:22:30.891 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:30.908 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:30.925 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:30.941 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:30.959 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:30.975 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.009 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.009 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.025 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: model
+20:22:31.057 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: model
+20:22:31.061 [Test worker] INFO  manager.ListenerWD -- Location of element-->input
+20:22:31.061 [Test worker] INFO  manager.ListenerWD -- Before click element -->inputtext-->
+20:22:31.108 [Test worker] INFO  manager.ListenerWD -- After click element -->inputtext-->
+20:22:31.141 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.141 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.175 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.179 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.194 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.208 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.225 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.240 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.261 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: year
+20:22:31.276 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: year
+20:22:31.279 [Test worker] INFO  manager.ListenerWD -- Location of element-->input
+20:22:31.291 [Test worker] INFO  manager.ListenerWD -- Before click element -->inputtext-->
+20:22:31.342 [Test worker] INFO  manager.ListenerWD -- After click element -->inputtext-->
+20:22:31.359 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.375 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.408 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.408 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.442 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.442 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.479 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.479 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.508 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: fuel
+20:22:31.525 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: fuel
+20:22:31.525 [Test worker] INFO  manager.ListenerWD -- Location of element-->select
+20:22:31.579 [Test worker] INFO  manager.ListenerWD -- Before click element -->optiontext-->Petrol
+20:22:31.609 [Test worker] INFO  manager.ListenerWD -- After click element -->optiontext-->Petrol
+20:22:31.609 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: seats
+20:22:31.625 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: seats
+20:22:31.642 [Test worker] INFO  manager.ListenerWD -- Location of element-->input
+20:22:31.642 [Test worker] INFO  manager.ListenerWD -- Before click element -->inputtext-->
+20:22:31.692 [Test worker] INFO  manager.ListenerWD -- After click element -->inputtext-->
+20:22:31.725 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.725 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.758 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.758 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.792 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.808 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.842 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.842 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:31.874 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: class
+20:22:31.879 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: class
+20:22:31.892 [Test worker] INFO  manager.ListenerWD -- Location of element-->input
+20:22:31.892 [Test worker] INFO  manager.ListenerWD -- Before click element -->inputtext-->
+20:22:31.959 [Test worker] INFO  manager.ListenerWD -- After click element -->inputtext-->
+20:22:31.979 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:31.979 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.008 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.008 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.042 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.042 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.062 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.075 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.092 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: serialNumber
+20:22:32.108 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: serialNumber
+20:22:32.108 [Test worker] INFO  manager.ListenerWD -- Location of element-->input
+20:22:32.125 [Test worker] INFO  manager.ListenerWD -- Before click element -->inputtext-->
+20:22:32.179 [Test worker] INFO  manager.ListenerWD -- After click element -->inputtext-->
+20:22:32.192 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.192 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.225 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.225 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.258 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.258 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.292 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.292 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.328 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: price
+20:22:32.342 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: price
+20:22:32.342 [Test worker] INFO  manager.ListenerWD -- Location of element-->input
+20:22:32.358 [Test worker] INFO  manager.ListenerWD -- Before click element -->inputtext-->
+20:22:32.409 [Test worker] INFO  manager.ListenerWD -- After click element -->inputtext-->
+20:22:32.442 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.442 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.479 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.479 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.526 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.526 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.563 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.574 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->input
+20:22:32.602 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.id: about
+20:22:32.618 [Test worker] INFO  manager.ListenerWD -- After find element-->By.id: about
+20:22:32.625 [Test worker] INFO  manager.ListenerWD -- Location of element-->textarea
+20:22:32.625 [Test worker] INFO  manager.ListenerWD -- Before click element -->textareatext-->
+20:22:32.690 [Test worker] INFO  manager.ListenerWD -- After click element -->textareatext-->
+20:22:32.708 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.708 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->textarea
+20:22:32.741 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.741 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->textarea
+20:22:32.773 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.777 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->textarea
+20:22:32.800 [Test worker] INFO  manager.ListenerWD -- sendKeys-->
+20:22:32.804 [Test worker] INFO  manager.ListenerWD -- sendKeys_TagName-->textarea
+20:22:32.825 [Test worker] INFO  manager.ListenerWD -- Before find element-->By.xpath: //button[@type='submit']
+20:22:32.843 [Test worker] INFO  manager.ListenerWD -- After find element-->By.xpath: //button[@type='submit']
+20:22:32.848 [Test worker] INFO  manager.ListenerWD -- Location of element-->button
+20:22:32.858 [Test worker] INFO  manager.ListenerWD -- Before click element -->buttontext-->Submit
+20:22:32.912 [Test worker] INFO  manager.ListenerWD -- After click element -->buttontext-->Submit
+20:22:32.912 [Test worker] INFO  tests.TestBase -- New car added
+20:22:32.915 [Test worker] INFO  tests.TestBase -- =============================================================================

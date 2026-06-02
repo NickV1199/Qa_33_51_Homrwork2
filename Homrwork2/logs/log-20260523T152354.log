@@ -1,8 +1,0 @@
-15:23:56.861 [Test worker] INFO  manager.ApplicationManager -- All tests runs in Chrome Browser
-15:23:58.032 [Test worker] INFO  manager.ApplicationManager -- The link --->https://ilcarro.web.app/search
-15:24:00.791 [Test worker] INFO  tests.TestBase -- Before method finished logout
-15:24:00.803 [Test worker] INFO  tests.TestBase -- Name of method(test) -->addNewCarSuccess
-15:24:00.807 [Test worker] INFO  tests.TestBase -- Start test with name 'addNewCarSuccess'
-15:24:00.807 [Test worker] INFO  tests.TestBase -- Test login data --->  email: 'bobthebobert@gmail.com' & password: 'Bobert123!'
-15:24:00.808 [Test worker] INFO  tests.TestBase -- Test car data --->  location: 'Tel Aviv, Israel', manufacture: 'Opel', model: 'Astra', year: '2025', fuel: 'Petrol', seats: '4', carClass: 'C', carRegNumber: '678-900-1221', price: '50', about: 'Nice car'
-15:24:03.072 [Test worker] INFO  tests.TestBase -- New car added
