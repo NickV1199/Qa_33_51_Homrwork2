@@ -28,10 +28,10 @@ public class DataProviderCar {
                     .model(all[1])
                     .year(all[2])
                     .fuel(all[3])
-                    .seats(Integer.parseInt(all[4]))
+                    .seats(all[4])
                     .carClass(all[5])
                     .carRegNumber(all[6])
-                    .price(Double.parseDouble(all[7]))
+                    .price(all[7])
                     .about(all[8])
                     .build()});
             line = reader.readLine();

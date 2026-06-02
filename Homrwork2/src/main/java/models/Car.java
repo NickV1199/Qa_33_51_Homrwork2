@@ -18,10 +18,10 @@ public class Car {
     private String model;
     private String year;
     private String fuel;
-    private int seats;
+    private String seats;
     private String carClass;
     private String carRegNumber;
-    private double price;
+    private String price;
     private String about;
 
 

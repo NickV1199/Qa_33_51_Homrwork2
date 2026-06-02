@@ -35,10 +35,10 @@ public class AddNewCarTests extends TestBase {
                 .model("Astra")
                 .year("2025")
                 .fuel("Petrol")
-                .seats(4)
+                .seats("4")
                 .carClass("C")
                 .carRegNumber("678-900-"+i)
-                .price(50)
+                .price("50")
                 .about("Nice car")
                 .build();
 
@@ -59,15 +59,15 @@ public class AddNewCarTests extends TestBase {
         logger.info("Start test with name 'carsCSV'");
         logger.info("Test login data --->  email: 'bobthebobert@gmail.com' & password: 'Bobert123!'");
 
-        logger.info("Test login data --->  from the file 'cars'");
-
         app.getHelperCar().openCarForm();
+
+        logger.info("Test login data --->  from the file 'cars'");
 
         app.getHelperCar().fillCarForm(car);
         app.getHelperCar().pause(1000);
         app.getHelperCar().submitCarForm();
 
-        logger.info("10 new cars added");
+        logger.info("new car added from the file");
     }
 
 

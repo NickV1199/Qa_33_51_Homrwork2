@@ -3,6 +3,8 @@ package manager;
 import com.google.common.io.Files;
 import net.bytebuddy.implementation.bytecode.Throw;
 import org.openqa.selenium.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,9 +15,11 @@ public class HelperBase {
 
     WebDriver wd;
 
+
     public HelperBase(WebDriver wd) {
         this.wd = wd;
     }
+
 
     public void click(By locator){
         wd.findElement(locator).click();
